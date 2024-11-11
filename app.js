@@ -1,28 +1,80 @@
-// Sample product data (you can replace this with your actual products)
+// Sample product data
 const products = [
-    {
+  {
       id: 1,
       name: "In Love With You",
-      price: "$89.99",
+      price: 140.00,
       description: "A romantic and floral fragrance.",
       image: "https://i.makeupstore.de/r/rd/rdppgfypx7b1.jpg",
-    },
-    {
+  },
+  {
       id: 2,
       name: "Because It's You",
-      price: "$99.99",
+      price: 79.00,
       description: "A sweet and fruity fragrance.",
       image: "https://m.media-amazon.com/images/I/61XAym-FT2L.jpg",
-    },
-    {
+  },
+  {
       id: 3,
       name: "Stronger With You",
-      price: "$109.99",
+      price: 99.00,
       description: "A spicy and woody fragrance.",
       image: "https://i1.perfumesclub.com/grande/108209-3.jpg",
-    }
-  ];
+  }
+];
+
+// Function to render products dynamically
+function renderProducts(productArray) {
+  const productList = document.getElementById("productList");
   
+  // Clear any existing products to avoid duplicates
+  productList.innerHTML = "";
+
+  // Loop through each product and create HTML elements
+  productArray.forEach(product => {
+      const productElement = document.createElement("div");
+      productElement.classList.add("image-box");
+
+      // Add product image, name, price, and button
+      productElement.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" width="300" height="250" />
+          <p>${product.name}</p>
+          <p class="product-price">€${product.price.toFixed(2)}</p> <!-- Display price with Euro sign -->
+          <div class="item-selection">
+              <input type="number" value="1" min="1" id="item${product.id}-quantity" />
+              <button onclick="addToCart(${product.id})">Add to Cart</button>
+          </div>
+      `;
+      
+      // Append the product element to the product list
+      productList.appendChild(productElement);
+  });
+}
+
+// Initial render of products when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+  renderProducts(products); // Render all products initially
+
+  // Event listener for sorting
+  const sortDropdown = document.getElementById("sort");
+  sortDropdown.addEventListener("change", function () {
+      const sortBy = sortDropdown.value;
+
+      let sortedProducts;
+      
+      // Sorting based on the selected value
+      if (sortBy === "asc") {
+          sortedProducts = [...products].sort((a, b) => a.price - b.price); // Low to high price
+      } else if (sortBy === "desc") {
+          sortedProducts = [...products].sort((a, b) => b.price - a.price); // High to low price
+      } else if (sortBy === "name") {
+          sortedProducts = [...products].sort((a, b) => a.name.localeCompare(b.name)); // Sort by name
+      }
+
+      renderProducts(sortedProducts); // Render the sorted products
+  });
+});
+
   // Cart to store added products
   const cartItems = [];
   
