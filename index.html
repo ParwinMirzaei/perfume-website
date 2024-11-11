@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css"> 
+    <title>Armani</title>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="left">
+        <img src="/images/giorgio-armani-icon-logo-symbol-600nw-2425801211.webp" alt="Armani logo" width="200" height="auto">
+    </div>
+    <div class="right">
+        <a href="#home"><i class="fas fa-home"></i> Home</a>
+        <a href="#shop"><i class="fas fa-laptop-code"></i> Shop</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
+</nav>
+    
+
+<main>
+
+<!-- SECTION 1: Home -->
+<div id="home" class="home">
+    <div class="home-content">
+        <!-- Left side content -->
+        <div class="left-content">
+            <h1><b>"We Are the Whisper of Unforgettable Moments"</b></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos odio ut similique. Temporibus voluptate earum eaque, necessitatibus et obcaecati! Voluptates, atque! Ad necessitatibus excepturi dolorem, ullam possimus in doloribus rem nemo odit voluptatum, exercitationem ab minus. Error dolor modi id illo sequi perspiciatis, consequatur suscipit ullam impedit obcaecati mollitia ducimus?</p>
+        </div>
+
+        <!-- Right side content -->
+        <div class="right-content">
+            <h1>"At Armani, Every Fragrance is a Whisper You’ll Never Forget."</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum ea doloribus molestiae, hic nulla fugiat officiis. Velit quam odit id expedita itaque, ad necessitatibus harum nesciunt laboriosam accusamus sit ut dolore quis eveniet vel, consequatur vitae adipisci non eius, optio magni amet in blanditiis corrupti! Dolore non maiores quas exercitationem?</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 2: Shop -->
+<div id="shop" class="shop">
+    <h1 class="shop-heading">Shop</h1>
+
+    <div class="image-row">
+        <div class="image-box">
+            <img src="https://i.makeupstore.de/r/rd/rdppgfypx7b1.jpg" alt="In Love With You" width="300" height="250" />
+            <p>In Love With You</p>
+            <div class="item-selection">
+                <input type="number" value="1" min="1" id="item1-quantity" />
+                <button onclick="addToCart('In Love With You', document.getElementById('item1-quantity').value)">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="image-box">
+            <img src="https://m.media-amazon.com/images/I/61XAym-FT2L.jpg" alt="Because It's You" width="300" height="250" />
+            <p>Because It's You</p>
+            <div class="item-selection">
+                <input type="number" value="1" min="1" id="item2-quantity" />
+                <button onclick="addToCart('Because It\'s You', document.getElementById('item2-quantity').value)">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="image-box">
+            <img src="https://i1.perfumesclub.com/grande/108209-3.jpg" alt="Stronger With You" width="300" height="250" />
+            <p>Stronger With You</p>
+            <div class="item-selection">
+                <input type="number" value="1" min="1" id="item3-quantity" />
+                <button onclick="addToCart('Stronger With You', document.getElementById('item3-quantity').value)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- SECTION 3: Contact Form -->
+<div id="contact" class="contact">
+    <h1>Contact Us</h1>
+    <form>
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input id="email" type="text" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea name="message" rows="5" cols="30" placeholder="Enter your message" required></textarea>
+        <input id="message" type="submit" name="submit" value="Send Message">
+    </form>
+
+<!-- SECTION 4: Section -->
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Giorgio Armani</p>
+        <div class="social">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+
+        </div>
+    </div>
+</footer>
+</main>
+</body>
+</html>
