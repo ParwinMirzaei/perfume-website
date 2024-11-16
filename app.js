@@ -93,13 +93,12 @@ function displayConfirmation(productName, quantity) {
   confirmation.textContent = `${productName} (x${quantity}) has been added to the cart.`;
   document.body.appendChild(confirmation);
 
-  // Remove confirmation message after 3 seconds
+  // Remove confirmation message after 2 seconds
   setTimeout(() => {
     confirmation.remove();
-  }, 3000);
+  }, 2000);
 }
 
-// Function to update the cart display
 // Function to update the cart display
 function updateCartDisplay() {
   const cartDisplay = document.querySelector(".modal-cart-content p");
@@ -171,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sortedProducts = [...products].sort((a, b) => a.name.localeCompare(b.name)); // Sort by name
     }
 
-    renderProducts(sortedProducts); // Render the sorted products
+    renderProducts(sortedProducts);
   });
 });
 
@@ -192,10 +191,8 @@ document.addEventListener("DOMContentLoaded", function () {
     checkout();
   });
 
-  // Existing product rendering and sorting code
-  renderProducts(products); // Render all products initially
+  renderProducts(products);
   
-  // Existing sorting functionality...
 });
 
 // Function to calculate the total price of all items in the cart
