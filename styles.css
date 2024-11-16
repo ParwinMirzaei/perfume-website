@@ -200,6 +200,21 @@ nav .right a:hover {
     right: 10px;
   }
   
+  #totalPriceButton, #checkoutButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  #totalPriceButton:hover, #checkoutButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
   /* Product Display */
   .image-box {
     text-align: center;
