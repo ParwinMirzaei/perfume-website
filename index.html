@@ -21,6 +21,7 @@
         <a href="#home"><i class="fas fa-home"></i> Home</a>
         <a href="#shop"><i class="fas fa-laptop-code"></i> Shop</a>
         <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+
     </div>
 </nav>
     
@@ -43,7 +44,6 @@
         </div>
     </div>
 </div>
-
 <!-- SECTION 2: Shop -->
 <div id="shop" class="shop">
     <h1 class="shop-heading">Shop</h1>
@@ -64,19 +64,30 @@
     </div>
 </div>
 
+
+<!-- Cart Modal -->
+<div id="modalCart" class="modal-cart">
+    <div class="modal-cart-content">
+        <span class="modal-cart-close">&times;</span>
+        <h1>Your Cart</h1>
+        <p>Your cart is empty.</p>
+        <!-- Total Price Button -->
+        <button id="totalPriceButton">Total Price</button>
+        <!-- Checkout Button -->
+        <button id="checkoutButton">Checkout</button>
+    </div>
+</div>
+
 <!-- Cart Button -->
 <button id="cartLink">View Cart</button>
 
-<!-- Placeholder for the Cart Modal -->
-<div id="cartContainer"></div>
-
+ 
 <!-- SECTION 3: Contact Form -->
 <div id="contact" class="contact">
     <h1>Contact Us</h1>
     <form>
         <label for="name">Name</label>
         <input id="name" type="text" name="name" placeholder="Enter your name" required>
-
         <label for="email">Email</label>
         <input id="email" type="text" name="email" placeholder="Enter your email" required>
 
