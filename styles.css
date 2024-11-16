@@ -205,15 +205,40 @@ nav .right a:hover {
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
-    background-color: #4CAF50; /* Green color */
+    background-color: hwb(57 36% 19%);
     color: white;
     border: none;
     border-radius: 5px;
   }
   
   #totalPriceButton:hover, #checkoutButton:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #b1c751;
   }
+
+  /* CSS for the Shopping Cart Button */
+#cartLink {
+    background-color: hwb(57 36% 19%); 
+    color: white;             
+    border: none;            
+    padding: 10px 20px;      
+    text-align: center;       
+    text-decoration: none;   
+    display: inline-block;    
+    font-size: 16px;        
+    margin: 10px 2px;        
+    cursor: pointer;         
+    border-radius: 5px;      
+    transition: background-color 0.3s ease;
+  }
+  
+  #cartLink:hover {
+    background-color: #b1c751; /* Darker green on hover */
+  }
+  
+  .cartLink {
+    font-weight: bold; /* Make the text bold for better visibility */
+  }
+  
   
   /* Product Display */
   .image-box {
@@ -249,7 +274,7 @@ nav .right a:hover {
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: hwb(1 9% 19%);
     color: white;
     border-radius: 5px;
     font-size: 14px;
