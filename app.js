@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
   
       // Append product to the product list
-      productList.appendChild(productElement);
+      //productList.appendChild(productElement);
     });
   });
   
@@ -117,8 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   
     // Display confirmation message
-   // displayConfirmation(product.name, quantity);
-   // updateCartDisplay();
+   displayConfirmation(product.name, quantity);
+   updateCartDisplay();
   }
   
   // Function to display the confirmation message when an item is added to the cart
