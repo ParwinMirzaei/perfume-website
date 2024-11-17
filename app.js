@@ -123,6 +123,7 @@ const modal = document.getElementById("modalCart");
 const cartLink = document.getElementById("cartLink");
 const closeBtn = document.getElementsByClassName("modal-cart-close")[0];
 
+
 // Open cart modal
 cartLink.onclick = function () {
   modal.style.display = "block";
@@ -139,6 +140,7 @@ closeBtn.onclick = function () {
     modal.style.display = "none";
   }, 300);
 };
+
 
 // Close cart modal if user clicks outside of it
 window.onclick = function (event) {
