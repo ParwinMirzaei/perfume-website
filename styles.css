@@ -215,7 +215,7 @@ nav .right a:hover {
   }
   
   #totalPriceButton:hover, #checkoutButton:hover {
-    background-color: #b1c751;
+    opacity: 0.6;
   }
 
   /* CSS for the Shopping Cart Button */
@@ -235,7 +235,7 @@ nav .right a:hover {
   }
   
   #cartLink:hover {
-    background-color: #b1c751; /* Darker green on hover */
+    opacity: 0.6;
   }
   
   .cartLink {
@@ -332,7 +332,8 @@ form textarea {
 }
 
 #contact form input[type="submit"]:hover {
-    background-color: #043257;
+    color: #3b9cb0; 
+    background-color: white;
 }
 
 
@@ -357,7 +358,7 @@ footer .social a {
     display: inline-block;
 }
 footer .social a:hover {
-    color: var(--hover-color);
+    opacity: 0.5;
 }
 
 .social a {
